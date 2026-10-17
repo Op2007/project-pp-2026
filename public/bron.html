@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>МЭТЧ-бронированиех</title>
+
+    <!-- Шрифты из кода  -->
+    <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libertinus+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans+Condensed:wght@200;400;500;600;700;900&display=swap" rel="stylesheet">
+
+    <style>
+        /* ===== ПЕРЕМЕННЫЕ ИЗ КОДА  ===== */
+        :root {
+            --bg-dark: #1a1d1a;
+            --bg-card: #152c18b3;
+            --bg-input: #29412ce6;
+            --bg-input-focus: #1e3c28cc;
+            --bg-select-option: #1a3a22;
+            --bg-footer: #152c18b3;
+
+            --bg-modal: rgba(20, 50, 30, 0.95);
+            --bg-overlay: rgba(0, 0, 0, 0.7);
+
+            --text-primary: #c8e6c9;
+            --text-light: #d9e8c2;
+            --text-muted: rgba(200, 230, 201, 0.6);
+            --text-tags: #456754;
+
+            --green-primary: #345538;
+            --green-light: #66bb6a;
+            --green-dark: #29902e;
+            --green-mid: #5a7a52;
+            --green-btn: #6B8E5A;
+            --green-icons: #72914E;
+            --green-hover: #3d7a3d;
+
+            --border-primary: rgba(76, 175, 80, 0.2);
+            --border-input: rgba(76, 175, 80, 0.25);
+            --border-modal: rgba(76, 175, 80, 0.3);
+            --shadow-card: 0 20px 60px rgba(0, 0, 0, 0.5);
+            --shadow-btn-hover: 0 6px 20px rgba(76, 175, 80, 0.4);
+
+            --color-error: #f44336;
+            --bg-error-shadow: rgba(244, 67, 54, 0.15);
+
+            --color-header-bg: rgba(45, 58, 45, 0.85);
+
+            --font-main: 'Sofia Sans Condensed', sans-serif;
+            --font-heading: 'Alumni Sans', sans-serif;
+        }
+
+        /* ===== БАЗОВЫЕ СТИЛИ ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-main);
+            background: var(--bg-dark);
+            color: var(--text-primary);
+            min-height: 100vh;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            background-image: url(image/текстура\ \(3\).svg);
+            background-position: 20px 0px;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        /* ===== ШАПКА ИЗ КОДА 2 ===== */
+        .header {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 100;
+            padding: 12px 30px;
+            background: var(--color-header-bg);
+            border-radius: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            width: 90%;
+            max-width: 700px;
+            transition: all 0.3s ease;
+        }
+
+        .nav {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .nav a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 24px;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+
+        .nav a:hover {
+            opacity: 0.7;
+        }
+
+        .btn-book {
+            background: var(--green-btn);
+            color: var(--text-light);
+            padding: 10px 24px;
+            border: none;
+            border-radius: 6px;
+            font-size: 22px;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s;
+            white-space: nowrap;
+        }
+
+        .btn-book:hover {
+            background: var(--green-mid);
+            transform: translateY(-1px);
+        }
+
+        /* ===== ГЛАВНЫЙ КОНТЕНТ ===== */
+        .hero {
+            position: relative;
+            z-index: 5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 120px 20px 60px;
+            flex: 1;
+        }
+
+        .booking-card {
+            background: var(--bg-card);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            padding: 40px 50px;
+            width: 100%;
+            max-width: 520px;
+            box-shadow: var(--shadow-card);
+        }
+
+        .booking-card h2 {
+            font-family: var(--font-heading);
+            text-align: center;
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--green-primary);
+            margin-bottom: 30px;
+            letter-spacing: 1px;
+        }
+
+        .form-group {
+            margin-bottom: 16px;
+            position: relative;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 16px 20px;
+            background: var(--bg-input);
+            border: none;
+            border-radius: 10px;
+            color: var(--text-primary);
+            font-size: 16px;
+            font-family: var(--font-main);
+            outline: none;
+            transition: all 0.3s ease;
+            appearance: none;
+            -webkit-appearance: none;
+        }
+
+        .form-group input::placeholder {
+            color: var(--text-muted);
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            border-color: var(--green-primary);
+            box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.15);
+            background: var(--bg-input-focus);
+        }
+
+        .form-group input.error,
+        .form-group select.error {
+            border-color: var(--color-error);
+            box-shadow: 0 0 0 3px var(--bg-error-shadow);
+        }
+
+        .form-group select {
+            cursor: pointer;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%234caf50' d='M6 8L0 0h12z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 16px center;
+            padding-right: 40px;
+        }
+
+        .form-group select option {
+            background: var(--bg-select-option);
+            color: var(--text-primary);
+        }
+
+        .error-message {
+            color: var(--color-error);
+            font-size: 12px;
+            margin-top: 4px;
+            display: none;
+            padding-left: 4px;
+        }
+
+        .error-message.show {
+            display: block;
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 16px;
+            background: var(--green-primary);
+            color: var(--bg-footer);
+            border: none;
+            border-radius: 10px;
+            font-size: 25px;
+            font-weight: 700;
+            font-family: var(--font-heading);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .btn-submit:hover {
+            background: var(--green-dark);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-btn-hover);
+        }
+
+        .btn-submit:active {
+            transform: translateY(0);
+        }
+
+        /* ===== ПОДВАЛ ИЗ КОДА 2 ===== */
+        .footer-wrapper {
+            width: 100%;
+            display: flex;
+            align-items: flex-end;
+            margin-top: auto;
+        }
+
+        .footer {
+            width: 75%;
+            background-color: var(--bg-footer);
+            padding: 50px 60px 40px 40px;
+            clip-path: polygon(0 0, calc(100% - 60px) 0, 100% 60px, 100% 100%, 0 100%);
+        }
+
+        .footer-content {
+            font-family: var(--font-main);
+            color: var(--text-light);
+            display: flex;
+            align-items: flex-start;
+            gap: 40px;
+        }
+
+        .footer-image {
+            width: 180px;
+            height: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .footer-nav {
+            display: flex;
+            gap: 50px;
+            flex: 1;
+        }
+
+        .footer-section h3 {
+            font-size: 25px;
+            font-weight: 900;
+            margin-bottom: 15px;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-section ul li a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: 200;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section ul li a:hover {
+            color: var(--text-tags);
+        }
+
+        .footer-contacts {
+            flex-shrink: 0;
+            min-width: 180px;
+        }
+
+        .footer-contacts h3 {
+            color: var(--text-light);
+            font-size: 25px;
+            font-weight: 900;
+            margin-bottom: 18px;
+        }
+
+        .footer-contacts p {
+            color: var(--text-light);
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+
+        .footer-contacts a {
+            color: var(--text-light);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-contacts a:hover {
+            color: #ffffff;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 12px;
+            margin-top: 22px;
+        }
+
+        .social-icon {
+            width: 44px;
+            height: 44px;
+            background: var(--green-icons);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            transition: all 0.7s ease-in-out;
+        }
+
+        .social-icon img {
+            width: 40px;
+            height: 40px;
+        }
+
+        .social-icon:hover {
+            background: #3d7a3d;
+        }
+
+        /* ===== МОДАЛЬНОЕ ОКНО ===== */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--bg-overlay);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .modal-overlay.show {
+            display: flex;
+        }
+
+        .modal {
+            background: var(--bg-modal);
+            border: 1px solid var(--border-modal);
+            border-radius: 16px;
+            padding: 40px;
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+            animation: modalIn 0.3s ease;
+        }
+
+        @keyframes modalIn {
+            from {
+                transform: scale(0.9);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .modal .check-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--green-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 30px;
+            color: var(--text-light);
+        }
+
+        .modal h3 {
+            color: var(--text-light);
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .modal p {
+            color: var(--text-primary);
+            font-size: 15px;
+            margin-bottom: 24px;
+        }
+
+        .modal button {
+            padding: 12px 30px;
+            background: var(--green-primary);
+            color: var(--text-light);
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            font-family: var(--font-main);
+            transition: background 0.3s;
+        }
+
+        .modal button:hover {
+            background: var(--green-dark);
+        }
+
+        /* ===== АДАПТИВНОСТЬ ИЗ КОДА 2 ===== */
+
+        /* Планшеты и небольшие десктопы */
+        @media (max-width: 992px) {
+            .header {
+                width: 95%;
+                padding: 10px 20px;
+            }
+            .nav {
+                gap: 20px;
+            }
+            .nav a {
+                font-size: 16px;
+            }
+            .btn-book {
+                font-size: 16px;
+                padding: 8px 18px;
+            }
+
+            .footer {
+                width: 100%;
+                clip-path: none;
+                padding: 40px 30px 30px;
+            }
+            .footer-content {
+                flex-direction: column;
+                gap: 30px;
+            }
+            .footer-image {
+                display: none;
+            }
+            .footer-nav {
+                flex-direction: column;
+                gap: 25px;
+            }
+        }
+
+        /* Мобильные устройства */
+        @media (max-width: 576px) {
+            .header {
+                top: 10px;
+                width: 95%;
+                padding: 15px 20px;
+                flex-direction: column;
+                gap: 15px;
+                border-radius: 16px;
+            }
+            .nav {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px 20px;
+                width: 100%;
+            }
+            .nav a {
+                font-size: 15px;
+            }
+            .btn-book {
+                width: 100%;
+                text-align: center;
+                padding: 12px;
+                font-size: 16px;
+            }
+
+            .hero {
+                padding-top: 180px;
+                padding-bottom: 40px;
+            }
+            .booking-card {
+                padding: 30px 24px;
+            }
+            .booking-card h2 {
+                font-size: 26px;
+            }
+
+            .footer {
+                width: 100%;
+                padding: 40px 20px 30px;
+            }
+            .footer-content {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                gap: 30px;
+            }
+            .footer-image {
+                display: none;
+            }
+            .footer-nav {
+                flex-direction: column;
+                align-items: center;
+                gap: 25px;
+                width: 100%;
+            }
+            .footer-section {
+                text-align: center;
+            }
+            .footer-section h3 {
+                font-size: 20px;
+            }
+            .footer-section ul li a {
+                font-size: 16px;
+            }
+            .footer-contacts {
+                align-items: center;
+                text-align: center;
+                width: 100%;
+            }
+            .footer-contacts h3 {
+                font-size: 20px;
+            }
+            .footer-contacts p,
+            .footer-contacts a {
+                font-size: 16px;
+            }
+            .social-icons {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== ШАПКА ИЗ КОДА 2 ===== -->
+    <header class="header">
+        <nav class="nav">
+            <a href="community.html#cards-homes">Проживание</a>
+            <a href="main.html#leisure">Досуг</a>
+            <a href="community.html">Комьюнити</a>
+            <a href="main-1.html">О нас</a>
+        </nav>
+        <a href="bron.html" class="btn-book">Забронировать</a>
+    </header>
+
+    <!-- ===== ГЛАВНЫЙ КОНТЕНТ ===== -->
+    <section class="hero" id="booking">
+        <div class="booking-card">
+            <h2>Бронирование</h2>
+            <form id="bookingForm" novalidate>
+                <div class="form-group">
+                    <input type="text" id="fio" placeholder="ФИО" autocomplete="name">
+                    <div class="error-message" id="fioError">Введите ваше ФИО</div>
+                </div>
+
+                <div class="form-group">
+                    <input type="tel" id="phone" placeholder="Номер телефона" autocomplete="tel">
+                    <div class="error-message" id="phoneError">Введите корректный номер телефона</div>
+                </div>
+
+                <div class="form-group">
+                    <input type="date" id="checkin" placeholder="Дата заезда">
+                    <div class="error-message" id="checkinError">Выберите дату заезда</div>
+                </div>
+
+                <div class="form-group">
+                    <select id="cottage">
+                        <option value="" disabled selected>Выбор домика</option>
+                        <option value="a-frame">А-фрейм</option>
+                        <option value="sphere">Дом-сфера</option>
+                        <option value="barrel">Дом-бочка</option>
+                        <option value="cube">Кубический дом</option>
+                        <option value="treehouse">Дом на дереве</option>
+                        <option value="geo">Геодезический купол</option>
+                    </select>
+                    <div class="error-message" id="cottageError">Выберите тип домика</div>
+                </div>
+
+                <div class="form-group">
+                    <input type="date" id="checkout" placeholder="Срок проживания (дата выезда)">
+                    <div class="error-message" id="checkoutError">Выберите дату выезда</div>
+                </div>
+
+                <button type="submit" class="btn-submit">Забронировать</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- ===== ПОДВАЛ ИЗ КОДА 2 ===== -->
+    <div class="footer-wrapper">
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-image">
+                    <img src="image/Image (12)-no-bg-preview (carve.photos) 2.svg" alt="Логотип">
+                </div>
+
+                <div class="footer-nav">
+                    <div class="footer-section">
+                        <h3>Навигация</h3>
+                        <ul>
+                            <li><a href="community.html#activities">Услуги</a></li>
+                            <li><a href="community.html#cards-homes">Каталог</a></li>
+                            <li><a href="#">Контакты</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-section">
+                        <h3>О нас</h3>
+                        <ul>
+                            <li><a href="#">Философия</a></li>
+                            <li><a href="#">Почему МЭТЧ?</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer-contacts">
+                    <h3>Контакты</h3>
+                    <p><a href="tel:88005553535">8 800 555 3535</a></p>
+                    <p><a href="mailto:example@mail">example@mail</a></p>
+
+                    <div class="social-icons">
+                        <a href="#" class="social-icon" title="Telegram">
+                            <img src="image/Telegram App.svg" alt="Telegram">
+                        </a>
+                        <a href="#" class="social-icon" title="VK">
+                            <img src="image/VKontakte.svg" alt="VK">
+                        </a>
+                        <a href="#" class="social-icon" title="Яндекс Дзен">
+                            <img src="image/Yandex Zen.svg" alt="Дзен">
+                        </a>
+                        <a href="#" class="social-icon" title="Одноклассники">
+                            <img src="image/Odnoklassniki.svg" alt="OK">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- ===== МОДАЛЬНОЕ ОКНО ===== -->
+    <div class="modal-overlay" id="successModal">
+        <div class="modal">
+            <div class="check-icon">✓</div>
+            <h3>Заявка отправлена!</h3>
+            <p>Мы свяжемся с вами в ближайшее время для подтверждения бронирования.</p>
+            <button onclick="closeModal()">Отлично</button>
+        </div>
+    </div>
+
+        <script>
+        // Установка минимальной даты — сегодня
+        const today = new Date().toISOString().split('T')[0];
+
+        // Проверяем, вошел ли пользователь в систему
+        const currentUserId = localStorage.getItem('userId');
+        const currentUserFio = localStorage.getItem('userFio');
+        const currentUserPhone = localStorage.getItem('userPhone');
+
+        // Если пользователь вошел, автоматически заполняем поля ФИО и телефона
+        if (currentUserId && currentUserFio) {
+        document.getElementById('fio').value = currentUserFio;
+        document.getElementById('phone').value = currentUserPhone;
+        // Делаем поля доступными только для чтения, чтобы пользователь не изменил чужие данные
+        document.getElementById('fio').readOnly = true;
+        document.getElementById('phone').readOnly = true;
+        document.getElementById('fio').style.opacity = '0.8';
+        document.getElementById('phone').style.opacity = '0.8';
+        }
+
+        document.getElementById('checkin').setAttribute('min', today);
+        document.getElementById('checkout').setAttribute('min', today);
+
+        document.getElementById('checkin').addEventListener('change', function() {
+            document.getElementById('checkout').setAttribute('min', this.value);
+            clearError('checkout');
+        });
+
+        // Маска телефона
+        document.getElementById('phone').addEventListener('input', function(e) {
+            let val = e.target.value.replace(/\D/g, '');
+            if (val.length > 0) {
+                if (val[0] === '7' || val[0] === '8') {
+                    val = val.substring(1);
+                }
+                let formatted = '+7';
+                if (val.length > 0) formatted += ' (' + val.substring(0, 3);
+                if (val.length >= 3) formatted += ') ' + val.substring(3, 6);
+                if (val.length >= 6) formatted += '-' + val.substring(6, 8);
+                if (val.length >= 8) formatted += '-' + val.substring(8, 10);
+                e.target.value = formatted;
+            }
+            clearError('phone');
+        });
+
+        // Очистка ошибок при вводе
+        document.getElementById('fio').addEventListener('input', () => clearError('fio'));
+        document.getElementById('cottage').addEventListener('change', () => clearError('cottage'));
+        document.getElementById('checkin').addEventListener('change', () => clearError('checkin'));
+        document.getElementById('checkout').addEventListener('change', () => clearError('checkout'));
+
+        function showError(fieldId) {
+            const field = document.getElementById(fieldId);
+            const error = document.getElementById(fieldId + 'Error');
+            field.classList.add('error');
+            if (error) error.classList.add('show');
+        }
+
+        function clearError(fieldId) {
+            const field = document.getElementById(fieldId);
+            const error = document.getElementById(fieldId + 'Error');
+            field.classList.remove('error');
+            if (error) error.classList.remove('show');
+        }
+
+        function clearAllErrors() {
+            ['fio', 'phone', 'checkin', 'cottage', 'checkout'].forEach(clearError);
+        }
+
+        // Валидация и ОТПРАВКА НА СЕРВЕР
+        document.getElementById('bookingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            clearAllErrors();
+
+            let isValid = true;
+            const fio = document.getElementById('fio').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const checkin = document.getElementById('checkin').value;
+            const cottage = document.getElementById('cottage').value;
+            const checkout = document.getElementById('checkout').value;
+
+            if (fio.length < 2 || fio.split(/\s+/).length < 2) {
+                showError('fio');
+                isValid = false;
+            }
+
+            const phoneDigits = phone.replace(/\D/g, '');
+            if (phoneDigits.length !== 11) {
+                showError('phone');
+                isValid = false;
+            }
+
+            if (!checkin) {
+                showError('checkin');
+                isValid = false;
+            } else {
+                const checkinDate = new Date(checkin);
+                const todayDate = new Date(today);
+                todayDate.setHours(0, 0, 0, 0);
+                if (checkinDate < todayDate) {
+                    showError('checkin');
+                    isValid = false;
+                }
+            }
+
+            if (!cottage) {
+                showError('cottage');
+                isValid = false;
+            }
+
+            if (!checkout) {
+                showError('checkout');
+                isValid = false;
+            } else if (checkin && new Date(checkout) <= new Date(checkin)) {
+                showError('checkout');
+                document.getElementById('checkoutError').textContent = 'Дата выезда должна быть позже даты заезда';
+                isValid = false;
+            }
+
+            if (isValid) {
+                const btn = document.querySelector('.btn-submit');
+                btn.textContent = 'Отправка...';
+                btn.disabled = true;
+
+                // Формируем данные для отправки на сервер
+                const payload = {
+                    user_id: currentUserId || null, // Привязываем к пользователю, если он вошел
+                    fio: fio,
+                    phone: phone,
+                    house_type: cottage, 
+                    checkin: checkin,
+                    checkout: checkout
+                };
+
+                // Реальный запрос к серверу
+                fetch('/api/bookings', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        document.getElementById('successModal').classList.add('show');
+                        this.reset();
+                    } else {
+                        alert(data.error || 'Ошибка бронирования');
+                    }
+                })
+                .catch(err => {
+                    console.error('Ошибка сети:', err);
+                    alert('Ошибка соединения с сервером');
+                })
+                .finally(() => {
+                    btn.textContent = 'Забронировать';
+                    btn.disabled = false;
+                });
+            }
+        });
+
+        function closeModal() {
+            document.getElementById('successModal').classList.remove('show');
+            window.location.href = 'main-1.html';
+        }
+
+        document.getElementById('successModal').addEventListener('click', function(e) {
+            if (e.target === this) closeModal();
+        });
+
+        document.querySelectorAll('nav a[href^="#"]').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) target.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>
