@@ -128,7 +128,7 @@ initializeDatabase();
 
 // API
 
-// ---------- РЕГИСТРАЦИЯ ----------
+// регистрация
 app.post('/api/register', async (req, res) => {
     const { phone, fio, password } = req.body;
     if (!phone || !password) return res.status(400).json({ success: false, error: 'Заполните телефон и пароль' });
@@ -175,8 +175,7 @@ app.post('/api/register', async (req, res) => {
         res.status(500).json({ success: false, error: 'Ошибка сервера' });
     }
 });
-
-// получение пользователя
+// проверка пользователя
 app.get('/api/users/:id', async (req, res) => {
     try {
         const result = await pool.query('SELECT id, phone, fio, balance, created_at FROM users WHERE id = $1', [req.params.id]);
