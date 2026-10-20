@@ -1,115 +1,96 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Глэмпинг МЭТЧ — отдых на природе с комфортом | Аренда домиков</title>
-  <meta name="description" content="Забронируйте домик в глэмпинге МЭТЧ. Цифровой детокс, 
-  панорамные окна, эко-тропы и умный комфорт вдали от города. Цены и фото домиков.">
-
-  <!-- шрифты -->
-  <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans+Condensed:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Libertinus+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-
-  <!-- шрифты из кода 2 (для шапки) -->
-  <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
-  <style>
-
-    :root {
-      /* цвета*/
-      --bg-dark: #1a1d1a;
-      --gradient-start: #232325;
-      --gradient-end: #10101B;
-      --green-dark: #3d5a3d;
-      --green-mid: #5a7a52;
-      --green-light: #7a9e6e;
-      --green-accent: #8fb87a;
-      --green-bright: #a8d48a;
-      --color-header-bg: rgba(45, 58, 45, 0.85);
-      --color-overlay-gradient: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0.4) 100%);
-
-
-      /* карточки+ui */
-      --bg-card-rd-gr-13: #627755;
-      --bg-card-rd-gr-55: #3A4E30;
-      --bg-card-rd-gr-100: #232325;
-      --back-tag: #aeff83b8;
-      --back-but: #b1dd9eb7;
-      --back-FAQ: #3a4d30cc;
-      --back-footer: #152c18b3;
-      --back-icons: #72914E;
-
-      /* текст */
-      --text-light: #d9e8c2;
-      --text-color-desc: #18430c;
-      --text-tags: #456754;
-      --color-text-white: #ffffff;
-      --color-text-muted: rgba(255, 255, 255, 0.9);
-
-      /* clip-paths */
-      --clip-shape: polygon(7% 0, 100% 0, 100% 85%, 93% 100%, 0 100%, 0 15%);
-      --clip-shape-1: polygon(15% 0, 100% 0, 100% 85%, 85% 100%, 0 100%, 0 15%);
-      --clip-shape-tag: polygon(15% 0, 100% 0, 100% 75%, 85% 100%, 0 100%, 0 25%);
-      --clip-shape-btn: polygon(15% 0, 100% 0, 100% 65%, 85% 100%, 0 100%, 0 35%);
-      --clip-shape-ab: polygon(0 0, 85% 0, 100% 15%, 100% 100%, 15% 100%, 0 85%);
-      --clip-shape-ab-rev: polygon(15% 0, 100% 0, 100% 85%, 85% 100%, 0 100%, 0 15%);
-
-      /* шрифты */
-      --font-1: 'Alumni Sans Pinstripe';
-      --font-2: 'Sofia Sans Condensed', sans-serif;
-      --font-3: 'Libertinus Sans', sans-serif;
-    }
-
-    /* база */
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-      background-color: var(--bg-dark);
-      background-image: url('image/текстура (2).svg');
-      background-size: cover;
-      background-repeat: no-repeat;
-      color: var(--text-light);
-      overflow-x: hidden;
-    }
-
-    /* полноэкранные секции, так как у body есть align-items: center */
-    .header, .hero, .about, .why-us, .route, .footer-wrapper {
-      width: 100%;
-    }
-
-    section {
-      padding: 80px 24px;
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      width: 100%;
-    }
-
-    .section-title {
-      text-align: center;
-      color: var(--text-light);
-      font-family: var(--font-2);
-      font-size: 36px;
-      font-weight: 100;
-      margin-bottom: 40px;
-      letter-spacing: 0.5px;
-    }
-
-    /* ===== ШАПКА  ===== */
-    .header {
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>МЭТЧ-главная</title>
+<!-- шрифты -->
+<link href="https://fonts.googleapis.com/css2?family=Sofia+Sans+Condensed:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Libertinus+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Alumni+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<style>
+:root {
+/* цвета*/
+--bg-dark: #1a1d1a;
+--gradient-start: #232325;
+--gradient-end: #10101B;
+--green-dark: #3d5a3d;
+--green-mid: #5a7a52;
+--green-light: #7a9e6e;
+--green-accent: #8fb87a;
+--green-bright: #a8d48a;
+--color-header-bg: rgba(45, 58, 45, 0.85);
+--color-overlay-gradient: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0.4) 100%);
+/* карточки+ui */
+--bg-card-rd-gr-13: #627755;
+--bg-card-rd-gr-55: #3A4E30;
+--bg-card-rd-gr-100: #232325;
+--back-tag: #aeff83b8;
+--back-but: #b1dd9eb7;
+--back-FAQ: #3a4d30cc;
+--back-footer: #152c18b3;
+--back-icons: #72914E;
+/* текст */
+--text-light: #d9e8c2;
+--text-color-desc: #18430c;
+--text-tags: #456754;
+--color-text-white: #ffffff;
+--color-text-muted: rgba(255, 255, 255, 0.9);
+/* clip-paths */
+--clip-shape: polygon(7% 0, 100% 0, 100% 85%, 93% 100%, 0 100%, 0 15%);
+--clip-shape-1: polygon(15% 0, 100% 0, 100% 85%, 85% 100%, 0 100%, 0 15%);
+--clip-shape-tag: polygon(15% 0, 100% 0, 100% 75%, 85% 100%, 0 100%, 0 25%);
+--clip-shape-btn: polygon(15% 0, 100% 0, 100% 65%, 85% 100%, 0 100%, 0 35%);
+--clip-shape-ab: polygon(0 0, 85% 0, 100% 15%, 100% 100%, 15% 100%, 0 85%);
+--clip-shape-ab-rev: polygon(15% 0, 100% 0, 100% 85%, 85% 100%, 0 100%, 0 15%);
+/* шрифты */
+--font-1: 'Alumni Sans Pinstripe';
+--font-2: 'Sofia Sans Condensed', sans-serif;
+--font-3: 'Libertinus Sans', sans-serif;
+}
+/* база */
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+body {
+min-height: 100vh;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: flex-start;
+background-color: var(--bg-dark);
+background-image: url('image/текстура (2).webp');
+background-size: cover;
+background-repeat: no-repeat;
+color: var(--text-light);
+overflow-x: hidden;
+}
+/* полноэкранные секции, так как у body есть align-items: center */
+.header, .hero, .about, .why-us, .route, .footer-wrapper {
+width: 100%;
+}
+section {
+padding: 80px 24px;
+}
+.container {
+max-width: 1200px;
+margin: 0 auto;
+width: 100%;
+}
+.section-title {
+text-align: center;
+color: var(--text-light);
+font-family: var(--font-2);
+font-size: 36px;
+font-weight: 100;
+margin-bottom: 40px;
+letter-spacing: 0.5px;
+}
+/* ===== ШАПКА ===== */
+.header {
       position: fixed;
       top: 20px;
       left: 50%;
@@ -127,8 +108,7 @@
       max-width: 700px;
       transition: all 0.3s ease;
     }
-
-    .nav {
+.nav {
       display: flex;
       gap: 30px;
       align-items: center;
@@ -166,1307 +146,1159 @@
       background: var(--green-mid);
       transform: translateY(-1px);
     }
-    /* ===== КОНЕЦ ШАПКИ ===== */
 
-    /* хиро */
-    .hero {
-      font-family: var(--font-3);
-      position: relative;
-      width: 100%;
-      height: 70vh;
-      background-image: url('image/hero-main.svg');
-      background-size: cover;
-      background-position: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-top: 0;
-      padding-top: 0;
-    }
-
-    .hero::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: var(--color-overlay-gradient);
-    }
-
-    .hero-content {
-      position: absolute;
-      bottom: 60px;
-      right: 60px;
-      max-width: 500px;
-      background-color: #232325c6;
-      padding: 40px 20px;
-      clip-path: var(--clip-shape);
-      z-index: 1;
-    }
-
-    .hero-content h1 {
-      color: #A1A2A6;
-      font-size: 48px;
-      font-weight: 300;
-      line-height: 1.2;
-      margin-bottom: 20px;
-    }
-
-    /* о нас */
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-      align-items: center;
-      margin-bottom: 60px;
-    }
-
-    .about-grid.reverse {
-      direction: rtl;
-    }
-
-    .about-grid.reverse > * {
-      direction: ltr;
-    }
-
-    .about-grid.reverse .about-image {
-      clip-path: var(--clip-shape-ab);
-    }
-
-    .about-image {
-      width: 100%;
-      aspect-ratio: 1;
-      object-fit: cover;
-      clip-path: var(--clip-shape-ab-rev);
-    }
-
-    .about-text {
-      padding: 20px;
-    }
-
-    .about-text p {
-      font-family: var(--font-3);
-      font-size: 18px;
-      line-height: 1.8;
-      color: var(--text-light);
-    }
-
-    .about-text p:last-child {
-      margin-bottom: 0;
-    }
-
-    /* почему  */
-    .why-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 30px;
-    }
-
-    .why-card {
-      position: relative;
-      overflow: hidden;
-      height: 480px;
-      cursor: pointer;
-      clip-path: var(--clip-shape-ab);
-    }
-
-    .why-card img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.7s;
-    }
-
-    .why-card:hover img {
-      transform: scale(1.2);
-    }
-
-    .why-card-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.3) 40%, transparent 100%);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      padding: 24px;
-    }
-
-    .why-card-title {
-      font-family: var(--font-2);
-      font-size: 22px;
-      font-weight: 400;
-      color: var(--text-light);
-      max-width: 70%;
-      letter-spacing: 0.3px;
-    }
-
-    .open-modal-btn {
-      background: var(--back-FAQ);
-      font-family: var(--font-1);
-      color: var(--text-light);
-      padding: 14px 15px;
-      font-size: 20px;
-      font-weight: 900;
-      cursor: pointer;
-      border: none;
-      clip-path: var(--clip-shape-btn);
-      transition: all 0.3s ease;
-      text-transform: none;
-      letter-spacing: 0.5px;
-      text-decoration: none;
-      align-self: flex-end;
-    }
-
-    .open-modal-btn:hover {
-      background: var(--green-bright);
-      color: var(--bg-dark);
-      filter: saturate(1.5);
-      transform: translateX(4px);
-    }
-
-    .open-modal-btn .arrow {
-      font-size: 16px;
-      transition: transform 0.3s;
-    }
-
-    .open-modal-btn:hover .arrow {
-      transform: translateX(4px);
-    }
-
-    /* ----- Затемнение (оверлей) ----- */
-    .modal-overlay {
-        position: fixed;
-        inset: 0;
-        background: rgba(20, 40, 20, 0.6);
-        backdrop-filter: blur(3px);
-        -webkit-backdrop-filter: blur(3px);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        visibility: hidden;
-        opacity: 0;
-        transition: opacity 0.25s ease, visibility 0s linear 0.25s;
-        padding: 1.5rem;
-        z-index: 1000;
-    }
-
-    .modal-overlay.active {
-        visibility: visible;
-        opacity: 1;
-        transition: opacity 0.25s ease, visibility 0s linear 0s;
-    }
-
-    /* ----- Модальная карточка ----- */
-    .modal-card {
-        background-image: url(image/image\ 99.svg);
-        background-repeat: round;
-        background-size: contain;
-        max-width: 580px;
-        width: 100%;
-        border-radius: 40px;
-        padding: 2.8rem 2.8rem 2.4rem;
-        transform: translateY(12px) scale(0.97);
-        transition: transform 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28), opacity 0.25s ease;
-        opacity: 0;
-        text-align: left;
-    }
-
-    .modal-overlay.active .modal-card {
-        transform: translateY(0) scale(1);
-        opacity: 1;
-    }
-
-    .modal-title {
-        text-align: center;
-        font-family: var(--font-3);
-        font-size: 2.2rem;
-        font-weight: 600;
-        color: var(--back-but);
-        letter-spacing: -0.01em;
-        margin-bottom: 1rem;
-        line-height: 1.2;
-    }
-
-    .modal-description {
-        text-align: center;
-        font-family: var(--font-3);
-        font-size: 1.1rem;
-        line-height: 1.6;
-        color: var(--green-bright);
-        margin-bottom: 2.2rem;
-        padding-right: 0.5rem;
-    }
-
-    .modal-description strong {
-        font-weight: 600;
-        color: var(--green-accent);
-    }
-
-    .modal-close-btn {
-        background: var(--back-footer);
-        border: none;
-        color: var(--text-light);
-        font-size: 1.15rem;
-        font-weight: 500;
-        padding: 0.9rem 2.8rem;
-        border-radius: 60px;
-        cursor: pointer;
-        transition: background 0.15s ease, transform 0.1s ease;
-        box-shadow: 0 4px 12px rgba(30, 70, 32, 0.25);
-        letter-spacing: 0.3px;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        min-width: 140px;
-    }
-
-    .modal-close-btn:hover {
-        background: #2a5e2d;
-        transform: scale(1.02);
-    }
-
-    .modal-close-btn:active {
-        transform: scale(0.96);
-    }
-
-    .modal-footer {
-        display: flex;
-        justify-content: center;
-        margin-top: 0.5rem;
-    }
-
-    @media (max-width: 500px) {
-        .modal-card {
-            padding: 2rem 1.5rem 1.8rem;
-            border-radius: 28px;
-        }
-        .modal-title {
-            font-size: 1.8rem;
-        }
-        .modal-description {
-            font-size: 1rem;
-        }
-        .modal-close-btn {
-            width: 100%;
-            justify-content: center;
-        }
-        .modal-footer {
-            justify-content: stretch;
-        }
-    }
-
-    /* домики  */
-    .cards-homes {
-      width: 100%;
-      max-width: 1000px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 20px;
-      padding: 60px 20px;
-    }
-
-    .card {
-      position: relative;
-      width: 900px;
-      max-width: 100%;
-      min-height: 420px;
-      background: radial-gradient(
-        circle at 25% 50%,
-        var(--bg-card-rd-gr-13) 0%,
-        var(--bg-card-rd-gr-13) 13%,
-        var(--bg-card-rd-gr-55) 55%,
-        var(--bg-card-rd-gr-100) 100%
-      );
-      clip-path: var(--clip-shape);
-      display: flex;
-      padding: 30px 40px 30px 30px;
-      margin-bottom: 40px;
-      gap: 30px;
-    }
-
-    .card-image {
-      flex-shrink: 0;
-      width: 360px;
-      height: 360px;
-      clip-path: var(--clip-shape-1);
-      overflow: hidden;
-      position: relative;
-    }
-
-    .card-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
-    .card-content {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-      padding-top: 5px;
-    }
-
-    .card-title {
-      background: var(--back-but);
-      color: var(--text-light);
-      font-family: var(--font-1);
-      padding: 10px 24px;
-      font-size: 25px;
-      font-weight: 750;
-      clip-path: var(--clip-shape);
-      display: inline-block;
-      align-self: flex-start;
-      letter-spacing: 1px;
-    }
-
-    .card-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .tag {
-      background: var(--back-tag);
-      color: var(--text-tags);
-      font-family: var(--font-1);
-      font-weight: 900;
-      padding: 6px 18px;
-      font-size: 15px;
-      clip-path: var(--clip-shape-tag);
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-
-    .card-description {
-      background: #cbf49759;
-      font-family: var(--font-2);
-      font-weight: 600;
-      padding: 18px 22px;
-      clip-path: var(--clip-shape);
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-    }
-
-    .card-description p {
-      color: var(--text-color-desc);
-      font-size: 15px;
-      line-height: 1.5;
-      opacity: 0.9;
-    }
-
-    .card-description .desc-line {
-      display: flex;
-      justify-content: space-between;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-      padding-bottom: 4px;
-    }
-
-    .card-description .desc-line:last-child {
-      border-bottom: none;
-    }
-
-    .card-description .desc-label {
-      color: rgba(255, 255, 255, 0.6);
-      font-size: 14px;
-    }
-
-    .card-description .desc-value {
-      color: var(--text-color-desc);
-      font-weight: 600;
-      font-size: 14px;
-    }
-
-    .card-buttons {
-      display: flex;
-      gap: 16px;
-      margin-top: auto;
-    }
-
-    .btn {
-      font-family: var(--font-1);
-      padding: 14px 28px;
-      font-size: 16px;
-      font-weight: 700;
-      cursor: pointer;
-      border: none;
-      clip-path: var(--clip-shape-btn);
-      transition: all 0.3s ease;
-      text-transform: none;
-      letter-spacing: 0.5px;
-    }
-
-    .btn-primary {
-      background: var(--back-but);
-      color: var(--text-light);
-    }
-
-    .btn-primary:hover {
-      background: #152c189f;
-      transform: scale(1.02);
-    }
-
-    .btn-secondary {
-      background: #152c189f;
-      color: #eeffd9;
-    }
-
-    .btn-secondary:hover {
-      background: #86a374cc;
-    }
-
-    /* FAQ SECTION */
-    .faq-container {
-      font-family: var(--font-2);
-      max-width: 800px;
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 20px;
-      padding: 60px 20px;
-    }
-
-    .faq-item {
-      background-color: var(--back-FAQ);
-      border-radius: 12px;
-      margin-bottom: 16px;
-      overflow: hidden;
-      transition: background-color 0.3s ease;
-      width: 100%;
-      animation: fadeIn 0.5s ease forwards;
-      opacity: 0;
-    }
-
-    .faq-item:nth-child(1) { animation-delay: 0.1s; }
-    .faq-item:nth-child(2) { animation-delay: 0.2s; }
-    .faq-item:nth-child(3) { animation-delay: 0.3s; }
-    .faq-item:nth-child(4) { animation-delay: 0.4s; }
-
-    .faq-item:hover {
-      background-color: var(--bg-card-rd-gr-13);
-    }
-
-    .faq-question {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 24px;
-      cursor: pointer;
-    }
-
-    .faq-question-text {
-      color: var(--text-light);
-      font-size: 16px;
-      font-weight: 500;
-      flex: 1;
-      padding-right: 20px;
-    }
-
-    .faq-toggle {
-      width: 36px;
-      height: 36px;
-      min-width: 36px;
-      border-radius: 50%;
-      background-color: var(--text-light);
-      border: none;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 22px;
-      font-weight: 700;
-      color: var(--back-FAQ);
-      transition: transform 0.3s ease, background-color 0.3s ease;
-      line-height: 1;
-      position: relative;
-    }
-
-    .faq-toggle:hover {
-      background-color: var(--back-but);
-      transform: scale(1.1);
-    }
-
-    .faq-toggle .icon-plus,
-    .faq-toggle .icon-minus {
-      position: absolute;
-      transition: opacity 0.3s ease, transform 0.3s ease;
-    }
-
-    .faq-toggle .icon-plus {
-      opacity: 1;
-      transform: rotate(0deg);
-    }
-
-    .faq-toggle .icon-minus {
-      opacity: 0;
-      transform: rotate(-90deg);
-    }
-
-    .faq-item.active .faq-toggle .icon-plus {
-      opacity: 0;
-      transform: rotate(90deg);
-    }
-
-    .faq-item.active .faq-toggle .icon-minus {
-      opacity: 1;
-      transform: rotate(0deg);
-    }
-
-    .faq-answer {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.4s ease, padding 0.4s ease;
-      padding: 0 24px;
-    }
-
-    .faq-item.active .faq-answer {
-      max-height: 300px;
-      padding: 0 24px 24px 24px;
-    }
-
-    .faq-answer-text {
-      color: var(--text-light);
-      font-size: 15px;
-      line-height: 1.6;
-      font-style: italic;
-    }
-
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(-10px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .map-container{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 35px 30px 60px;
-      cursor: pointer;
-    }
-
-    /* подвал */
-    .footer-wrapper {
-      width: 100%;
-      display: flex;
-      align-items: flex-end;
-    }
-
-    .footer {
-      width: 75%;
-      background-color: var(--back-footer);
-      padding: 50px 60px 40px 40px;
-      clip-path: polygon(0 0, calc(100% - 60px) 0, 100% 60px, 100% 100%, 0 100%);
-    }
-
-    .footer-content {
-      font-family: var(--font-2);
-      color: var(--text-light);
-      display: flex;
-      align-items: flex-start;
-      gap: 40px;
-    }
-
-    .footer-image {
-      width: 180px;
-      height: 180px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .footer-nav {
-      display: flex;
-      gap: 50px;
-      flex: 1;
-    }
-
-    .footer-section h3 {
-      font-size: 25px;
-      font-weight: 900;
-      margin-bottom: 15px;
-    }
-
-    .footer-section ul {
-      list-style: none;
-    }
-
-    .footer-section ul li {
-      margin-bottom: 10px;
-    }
-
-    .footer-section ul li a {
-      color: var(--text-light);
-      text-decoration: none;
-      font-size: 20px;
-      font-weight: 200;
-      transition: color 0.3s ease;
-    }
-
-    .footer-section ul li a:hover {
-      color: var(--text-tags);
-    }
-
-    .footer-contacts {
-      flex-shrink: 0;
-      min-width: 180px;
-    }
-
-    .footer-contacts h3 {
-      color: var(--text-light);
-      font-size: 25px;
-      font-weight: 900;
-      margin-bottom: 18px;
-    }
-
-    .footer-contacts p {
-      color: var(--text-light);
-      font-size: 20px;
-      margin-bottom: 8px;
-    }
-
-    .footer-contacts a {
-      color: var(--text-light);
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-
-    .footer-contacts a:hover {
-      color: #ffffff;
-    }
-
-    .social-icons {
-      display: flex;
-      gap: 12px;
-      margin-top: 22px;
-    }
-
-    .social-icon {
-      width: 44px;
-      height: 44px;
-      background: var(--back-icons);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #ffffff;
-      transition: all 0.7s ease-in-out;
-    }
-
-    .social-icon img {
-      width: 40px;
-      height: 40px;
-    }
-
-    .social-icon:hover {
-      background: #3d7a3d;
-    }
-
-    /* адаптивность */
-    @media (max-width: 968px) {
-      .footer {
-        width: 100%;
-        clip-path: none;
-        padding: 40px 30px 30px;
-      }
-      .footer-content {
-        flex-direction: column;
-        gap: 30px;
-      }
-      .footer-image {
-        display: none;
-      }
-      .footer-nav {
-        flex-direction: column;
-        gap: 25px;
-      }
-    }
-
-    @media (max-width: 960px) {
-      .card {
-        flex-direction: column;
-        padding: 25px;
-      }
-      .card-image {
-        width: 100%;
-        height: 300px;
-      }
-    }
-
-    @media (max-width: 900px) {
-      .about-grid {
-        grid-template-columns: 1fr;
-      }
-      .about-grid.reverse {
-        direction: ltr;
-      }
-      .why-grid {
-        grid-template-columns: 1fr;
-      }
-      .route-grid {
-        grid-template-columns: 1fr;
-      }
-      .hero-overlay {
-        bottom: 30px;
-        right: 20px;
-        left: 20px;
-      }
-    }
-
-    /* ===== АДАПТИВ ДЛЯ НОВОЙ ШАПКИ ===== */
-    @media (max-width: 992px) {
-      .header {
-        width: 95%;
-        padding: 10px 20px;
-      }
-      .nav {
-        gap: 20px;
-      }
-      .nav a {
-        font-size: 16px;
-      }
-      .btn-book {
-        font-size: 16px;
-        padding: 8px 18px;
-      }
-    }
-
-    @media (max-width: 576px) {
-      .header {
-        top: 10px;
-        width: 95%;
-        padding: 15px 20px;
-        flex-direction: column;
-        gap: 15px;
-        border-radius: 16px;
-      }
-      .nav {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px 20px;
-        width: 100%;
-      }
-      .nav a {
-        font-size: 15px;
-      }
-      .btn-book {
-        width: 100%;
-        text-align: center;
-        padding: 12px;
-        font-size: 16px;
-      }
-      .hero {
-        padding-top: 100px;
-        height: 60vh;
-      }
-      .hero-content {
-        bottom: 30px;
-        right: 20px;
-        left: 20px;
-        max-width: none;
-      }
-      .hero-content h1 {
-        font-size: 32px;
-      }
-    }
-  </style>
+/* хиро */
+.hero {
+font-family: var(--font-3);
+position: relative;
+width: 100%;
+height: 70vh;
+background-image: url('image/hero-main.webp');
+background-size: cover;
+background-position: center;
+display: flex;
+align-items: center;
+justify-content: center;
+margin-top: 0;
+padding-top: 0;
+}
+.hero::before {
+content: '';
+position: absolute;
+inset: 0;
+background: var(--color-overlay-gradient);
+}
+.hero-content {
+position: absolute;
+bottom: 60px;
+right: 60px;
+max-width: 500px;
+background-color: #232325c6;
+padding: 40px 20px;
+clip-path: var(--clip-shape);
+z-index: 1;
+}
+.hero-content h1 {
+color: #A1A2A6;
+font-size: 48px;
+font-weight: 300;
+line-height: 1.2;
+margin-bottom: 20px;
+}
+/* о нас */
+.about-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 40px;
+align-items: center;
+margin-bottom: 60px;
+}
+.about-grid.reverse {
+direction: rtl;
+}
+.about-grid.reverse > * {
+direction: ltr;
+}
+.about-grid.reverse .about-image {
+clip-path: var(--clip-shape-ab);
+}
+.about-image {
+width: 100%;
+aspect-ratio: 1;
+object-fit: cover;
+clip-path: var(--clip-shape-ab-rev);
+}
+.about-text {
+padding: 20px;
+}
+.about-text p {
+font-family: var(--font-3);
+font-size: 18px;
+line-height: 1.8;
+color: var(--text-light);
+}
+.about-text p:last-child {
+margin-bottom: 0;
+}
+/* почему  */
+.why-grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 30px;
+}
+.why-card {
+position: relative;
+overflow: hidden;
+height: 480px;
+cursor: pointer;
+clip-path: var(--clip-shape-ab);
+}
+.why-card img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+transition: transform 0.7s;
+}
+.why-card:hover img {
+transform: scale(1.2);
+}
+.why-card-overlay {
+position: absolute;
+inset: 0;
+background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.3) 40%, transparent 100%);
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+padding: 24px;
+}
+.why-card-title {
+font-family: var(--font-2);
+font-size: 22px;
+font-weight: 400;
+color: var(--text-light);
+max-width: 70%;
+letter-spacing: 0.3px;
+}
+.open-modal-btn {
+background: var(--back-FAQ);
+font-family: var(--font-1);
+color: var(--text-light);
+padding: 14px 15px;
+font-size: 20px;
+font-weight: 900;
+cursor: pointer;
+border: none;
+clip-path: var(--clip-shape-btn);
+transition: all 0.3s ease;
+text-transform: none;
+letter-spacing: 0.5px;
+text-decoration: none;
+align-self: flex-end;
+}
+.open-modal-btn:hover {
+background: var(--green-bright);
+color: var(--bg-dark);
+filter: saturate(1.5);
+transform: translateX(4px);
+}
+.open-modal-btn .arrow {
+font-size: 16px;
+transition: transform 0.3s;
+}
+.open-modal-btn:hover .arrow {
+transform: translateX(4px);
+}
+/* ----- Затемнение (оверлей) ----- */
+.modal-overlay {
+position: fixed;
+inset: 0;
+background: rgba(20, 40, 20, 0.6);
+backdrop-filter: blur(3px);
+-webkit-backdrop-filter: blur(3px);
+display: flex;
+align-items: center;
+justify-content: center;
+visibility: hidden;
+opacity: 0;
+transition: opacity 0.25s ease, visibility 0s linear 0.25s;
+padding: 1.5rem;
+z-index: 1000;
+}
+.modal-overlay.active {
+visibility: visible;
+opacity: 1;
+transition: opacity 0.25s ease, visibility 0s linear 0s;
+}
+/* ----- Модальная карточка ----- */
+.modal-card {
+background-image: url(image/image\ 99.webp);
+background-repeat: round;
+background-size: contain;
+max-width: 580px;
+width: 100%;
+border-radius: 40px;
+padding: 2.8rem 2.8rem 2.4rem;
+transform: translateY(12px) scale(0.97);
+transition: transform 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28), opacity 0.25s ease;
+opacity: 0;
+text-align: left;
+}
+.modal-overlay.active .modal-card {
+transform: translateY(0) scale(1);
+opacity: 1;
+}
+.modal-title {
+text-align: center;
+font-family: var(--font-3);
+font-size: 2.2rem;
+font-weight: 600;
+color: var(--back-but);
+letter-spacing: -0.01em;
+margin-bottom: 1rem;
+line-height: 1.2;
+}
+.modal-description {
+text-align: center;
+font-family: var(--font-3);
+font-size: 1.1rem;
+line-height: 1.6;
+color: var(--green-bright);
+margin-bottom: 2.2rem;
+padding-right: 0.5rem;
+}
+.modal-description strong {
+font-weight: 600;
+color: var(--green-accent);
+}
+.modal-close-btn {
+background: var(--back-footer);
+border: none;
+color: var(--text-light);
+font-size: 1.15rem;
+font-weight: 500;
+padding: 0.9rem 2.8rem;
+border-radius: 60px;
+cursor: pointer;
+transition: background 0.15s ease, transform 0.1s ease;
+box-shadow: 0 4px 12px rgba(30, 70, 32, 0.25);
+letter-spacing: 0.3px;
+display: inline-flex;
+align-items: center;
+justify-content: center;
+min-width: 140px;
+}
+.modal-close-btn:hover {
+background: #2a5e2d;
+transform: scale(1.02);
+}
+.modal-close-btn:active {
+transform: scale(0.96);
+}
+.modal-footer {
+display: flex;
+justify-content: center;
+margin-top: 0.5rem;
+}
+@media (max-width: 500px) {
+.modal-card {
+padding: 2rem 1.5rem 1.8rem;
+border-radius: 28px;
+}
+.modal-title {
+font-size: 1.8rem;
+}
+.modal-description {
+font-size: 1rem;
+}
+.modal-close-btn {
+width: 100%;
+justify-content: center;
+}
+.modal-footer {
+justify-content: stretch;
+}
+}
+/* домики  */
+.cards-homes {
+width: 100%;
+max-width: 1000px;
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 20px;
+padding: 60px 20px;
+}
+.card {
+position: relative;
+width: 900px;
+max-width: 100%;
+min-height: 420px;
+background: radial-gradient(
+circle at 25% 50%,
+var(--bg-card-rd-gr-13) 0%,
+var(--bg-card-rd-gr-13) 13%,
+var(--bg-card-rd-gr-55) 55%,
+var(--bg-card-rd-gr-100) 100%
+);
+clip-path: var(--clip-shape);
+display: flex;
+padding: 30px 40px 30px 30px;
+margin-bottom: 40px;
+gap: 30px;
+}
+.card-image {
+flex-shrink: 0;
+width: 360px;
+height: 360px;
+clip-path: var(--clip-shape-1);
+overflow: hidden;
+position: relative;
+}
+.card-image img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+display: block;
+}
+.card-content {
+flex: 1;
+display: flex;
+flex-direction: column;
+gap: 16px;
+padding-top: 5px;
+}
+.card-title {
+background: var(--back-but);
+color: var(--text-light);
+font-family: var(--font-1);
+padding: 10px 24px;
+font-size: 25px;
+font-weight: 750;
+clip-path: var(--clip-shape);
+display: inline-block;
+align-self: flex-start;
+letter-spacing: 1px;
+}
+.card-tags {
+display: flex;
+flex-wrap: wrap;
+gap: 10px;
+}
+.tag {
+background: var(--back-tag);
+color: var(--text-tags);
+font-family: var(--font-1);
+font-weight: 900;
+padding: 6px 18px;
+font-size: 15px;
+clip-path: var(--clip-shape-tag);
+text-transform: uppercase;
+letter-spacing: 0.5px;
+}
+.card-description {
+background: #cbf49759;
+font-family: var(--font-2);
+font-weight: 600;
+padding: 18px 22px;
+clip-path: var(--clip-shape);
+flex: 1;
+display: flex;
+flex-direction: column;
+gap: 6px;
+}
+.card-description p {
+color: var(--text-color-desc);
+font-size: 15px;
+line-height: 1.5;
+opacity: 0.9;
+}
+.card-description .desc-line {
+display: flex;
+justify-content: space-between;
+border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+padding-bottom: 4px;
+}
+.card-description .desc-line:last-child {
+border-bottom: none;
+}
+.card-description .desc-label {
+color: rgba(255, 255, 255, 0.6);
+font-size: 14px;
+}
+.card-description .desc-value {
+color: var(--text-color-desc);
+font-weight: 600;
+font-size: 14px;
+}
+.card-buttons {
+display: flex;
+gap: 16px;
+margin-top: auto;
+}
+.btn {
+font-family: var(--font-1);
+padding: 14px 28px;
+font-size: 16px;
+font-weight: 700;
+cursor: pointer;
+border: none;
+clip-path: var(--clip-shape-btn);
+transition: all 0.3s ease;
+text-transform: none;
+letter-spacing: 0.5px;
+}
+.btn-primary {
+background: var(--back-but);
+color: var(--text-light);
+}
+.btn-primary:hover {
+background: #152c189f;
+transform: scale(1.02);
+}
+.btn-secondary {
+background: #152c189f;
+color: #eeffd9;
+}
+.btn-secondary:hover {
+background: #86a374cc;
+}
+/* FAQ SECTION */
+.faq-container {
+font-family: var(--font-2);
+max-width: 800px;
+width: 100%;
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 20px;
+padding: 60px 20px;
+}
+.faq-item {
+background-color: var(--back-FAQ);
+border-radius: 12px;
+margin-bottom: 16px;
+overflow: hidden;
+transition: background-color 0.3s ease;
+width: 100%;
+animation: fadeIn 0.5s ease forwards;
+opacity: 0;
+}
+.faq-item:nth-child(1) { animation-delay: 0.1s; }
+.faq-item:nth-child(2) { animation-delay: 0.2s; }
+.faq-item:nth-child(3) { animation-delay: 0.3s; }
+.faq-item:nth-child(4) { animation-delay: 0.4s; }
+.faq-item:hover {
+background-color: var(--bg-card-rd-gr-13);
+}
+.faq-question {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 20px 24px;
+cursor: pointer;
+}
+.faq-question-text {
+color: var(--text-light);
+font-size: 16px;
+font-weight: 500;
+flex: 1;
+padding-right: 20px;
+}
+.faq-toggle {
+width: 36px;
+height: 36px;
+min-width: 36px;
+border-radius: 50%;
+background-color: var(--text-light);
+border: none;
+cursor: pointer;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 22px;
+font-weight: 700;
+color: var(--back-FAQ);
+transition: transform 0.3s ease, background-color 0.3s ease;
+line-height: 1;
+position: relative;
+}
+.faq-toggle:hover {
+background-color: var(--back-but);
+transform: scale(1.1);
+}
+.faq-toggle .icon-plus,
+.faq-toggle .icon-minus {
+position: absolute;
+transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.faq-toggle .icon-plus {
+opacity: 1;
+transform: rotate(0deg);
+}
+.faq-toggle .icon-minus {
+opacity: 0;
+transform: rotate(-90deg);
+}
+.faq-item.active .faq-toggle .icon-plus {
+opacity: 0;
+transform: rotate(90deg);
+}
+.faq-item.active .faq-toggle .icon-minus {
+opacity: 1;
+transform: rotate(0deg);
+}
+.faq-answer {
+max-height: 0;
+overflow: hidden;
+transition: max-height 0.4s ease, padding 0.4s ease;
+padding: 0 24px;
+}
+.faq-item.active .faq-answer {
+max-height: 300px;
+padding: 0 24px 24px 24px;
+}
+.faq-answer-text {
+color: var(--text-light);
+font-size: 15px;
+line-height: 1.6;
+font-style: italic;
+}
+@keyframes fadeIn {
+from {
+opacity: 0;
+transform: translateY(-10px);
+}
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+.map-container{
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 35px 30px 60px;
+cursor: pointer;
+}
+/* подвал */
+.footer-wrapper {
+width: 100%;
+display: flex;
+align-items: flex-end;
+}
+.footer {
+width: 75%;
+background-color: var(--back-footer);
+padding: 50px 60px 40px 40px;
+clip-path: polygon(0 0, calc(100% - 60px) 0, 100% 60px, 100% 100%, 0 100%);
+}
+.footer-content {
+font-family: var(--font-2);
+color: var(--text-light);
+display: flex;
+align-items: flex-start;
+gap: 40px;
+}
+.footer-image {
+width: 180px;
+height: 180px;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.footer-nav {
+display: flex;
+gap: 50px;
+flex: 1;
+}
+.footer-section h3 {
+font-size: 25px;
+font-weight: 900;
+margin-bottom: 15px;
+}
+.footer-section ul {
+list-style: none;
+}
+.footer-section ul li {
+margin-bottom: 10px;
+}
+.footer-section ul li a {
+color: var(--text-light);
+text-decoration: none;
+font-size: 20px;
+font-weight: 200;
+transition: color 0.3s ease;
+}
+.footer-section ul li a:hover {
+color: var(--text-tags);
+}
+.footer-contacts {
+flex-shrink: 0;
+min-width: 180px;
+}
+.footer-contacts h3 {
+color: var(--text-light);
+font-size: 25px;
+font-weight: 900;
+margin-bottom: 18px;
+}
+.footer-contacts p {
+color: var(--text-light);
+font-size: 20px;
+margin-bottom: 8px;
+}
+.footer-contacts a {
+color: var(--text-light);
+text-decoration: none;
+transition: color 0.3s ease;
+}
+.footer-contacts a:hover {
+color: #ffffff;
+}
+.social-icons {
+display: flex;
+gap: 12px;
+margin-top: 22px;
+}
+.social-icon {
+width: 44px;
+height: 44px;
+background: var(--back-icons);
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+color: #ffffff;
+transition: all 0.7s ease-in-out;
+}
+.social-icon img {
+width: 40px;
+height: 40px;
+}
+.social-icon:hover {
+background: #3d7a3d;
+}
+/* адаптивность */
+@media (max-width: 968px) {
+.footer {
+width: 100%;
+clip-path: none;
+padding: 40px 30px 30px;
+}
+.footer-content {
+flex-direction: column;
+gap: 30px;
+}
+.footer-image {
+display: none;
+}
+.footer-nav {
+flex-direction: column;
+gap: 25px;
+}
+}
+@media (max-width: 960px) {
+.card {
+flex-direction: column;
+padding: 25px;
+}
+.card-image {
+width: 100%;
+height: 300px;
+}
+}
+@media (max-width: 900px) {
+.about-grid {
+grid-template-columns: 1fr;
+}
+.about-grid.reverse {
+direction: ltr;
+}
+.why-grid {
+grid-template-columns: 1fr;
+}
+.route-grid {
+grid-template-columns: 1fr;
+}
+.hero-overlay {
+bottom: 30px;
+right: 20px;
+left: 20px;
+}
+}
+/* ===== АДАПТИВ ДЛЯ ШАПКИ ===== */
+@media (max-width: 992px) {
+.header {
+width: 95%;
+padding: 10px 20px;
+}
+.nav {
+gap: 20px;
+}
+.nav a {
+font-size: 16px;
+}
+.btn-book {
+font-size: 16px;
+padding: 8px 18px;
+}
+}
+@media (max-width: 576px) {
+.header {
+top: 10px;
+width: 95%;
+padding: 15px 20px;
+flex-direction: column;
+gap: 15px;
+border-radius: 16px;
+}
+.nav {
+flex-wrap: wrap;
+justify-content: center;
+gap: 10px 20px;
+width: 100%;
+}
+.nav a {
+font-size: 15px;
+}
+.btn-book {
+width: 100%;
+text-align: center;
+padding: 12px;
+font-size: 16px;
+}
+.hero {
+padding-top: 100px;
+height: 60vh;
+}
+.hero-content {
+bottom: 30px;
+right: 20px;
+left: 20px;
+max-width: none;
+}
+.hero-content h1 {
+font-size: 32px;
+}
+}
+</style>
 </head>
 <body>
-
-  <!-- ===== ШАПКА  ===== -->
-  <header class="header">
-    <nav class="nav">
-      <a href="community.html#cards-homes">Проживание</a>
-      <a href="main.html#leisure">Досуг</a>
-      <a href="community.html">Комьюнити</a>
-      <a href="main-1.html">О нас</a>
-    </nav>
-    <a href="cabinet.html" class="btn-book">Кабинет</a>
-  </header>
-
-  <!-- хиро -->
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Отдыхайте без лишних забот</h1>
-    </div>
-  </section>
-
-  <!-- о нас -->
-  <section class="about" id="about">
-    <div class="container">
-      <h2 class="section-title">О нас</h2>
-
-      <div class="about-grid">
-        <img class="about-image" src="image/А-фрейм.png" alt="Домики в лесу">
-        <div class="about-text">
-          <p>Глэмпинг МЭТЧ — это комфортный отдых на природе вдали 
-            от городского шума. Мы предлагаем аренду утепленных домиков 
-            с панорамными окнами, где можно устроить цифровой детокс. 
-            На территории есть зона для костра, эко-тропы и минималистичный дизайн, 
-            созданный для спокойного отдыха с семьей или друзьями.</p>
-          <p>Представьте: вы просыпаетесь не от звонка будильника, а от мягкого 
-            солнечного света, пробивающегося сквозь панорамное окно. Ваш первый 
-            кофе приготовлен на собственной террасе, а воздух пахнет хвоей 
-            и утренней росой. Здесь время замедляется. Мы продумали каждую деталь: 
-            от качественного постельного белья и ароматных травяных чаёв до библиотеки 
-            бестселлеров и пледов для вечерних посиделок. Этот глэмпинг — ваша 
-            персональная перезагрузка. Место, где можно выключить телефон, 
-            чтобы наконец услышать себя.</p>
-        </div>
-      </div>
-
-      <div class="about-grid reverse">
-        <img class="about-image" src="image/дом-в-лесу.png" alt="Домики вечером">
-        <div class="about-text">
-          <p>Мы стёрли грань между дикой природой и премиальным комфортом. Здесь вас ждут панорамные окна с видом на вековые деревья, ортопедические матрасы, дизайнерская мебель из натуральных материалов и горячий душ, не нарушающий гармонию окружения. Мы намеренно оставили Wi-Fi только в общей зоне: в ваших домиках связи нет, и это наша главная особенность. Замените бесконечный скроллинг ленты на наблюдение за млечным путём, а звуковые уведомления — на пение птиц.</p>
-          <p>Наша философия — «не навреди». Мы строим в диалоге с ландшафтом, используем экологичные материалы и поддерживаем локальных фермеров, чтобы ваш отдых был не только приятным, но и осознанным.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- почему мы -->
-  <section class="why-us" id="leisure">
-    <div class="container">
-        <h2 class="section-title">Почему выбирают нас?</h2>
-        <div class="why-grid">
-            <!-- Кнопка 1: Экологичность -->
-            <div class="why-card">
-                <img src="image/ecology.svg" alt="Экологичность">
-                <div class="why-card-overlay">
-                    <span class="why-card-title">Экологичность</span>
-                    <button class="open-modal-btn" data-modal="modal-eco">Узнать больше <span class="arrow">&rarr;</span></button>
-                </div>
-            </div>
-            <!-- Кнопка 2: Ритм природы -->
-            <div class="why-card">
-                <img src="image/nature-rithm.svg" alt="Ритм природы">
-                <div class="why-card-overlay">
-                    <span class="why-card-title">Ритм природы</span>
-                    <button class="open-modal-btn" data-modal="modal-rhythm">Узнать больше <span class="arrow">&rarr;</span></button>
-                </div>
-            </div>
-            <!-- Кнопка 3: Умный комфорт -->
-            <div class="why-card">
-                <img src="image/smart-comfortable.svg" alt="Умный комфорт">
-                <div class="why-card-overlay">
-                    <span class="why-card-title">Умный комфорт</span>
-                    <button class="open-modal-btn" data-modal="modal-comfort">Узнать больше <span class="arrow">&rarr;</span></button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal-overlay" id="modal-eco" role="dialog" aria-modal="true" aria-labelledby="ecoTitle">
-    <div class="modal-card">
-        <h2 class="modal-title" id="ecoTitle">Экологичность</h2>
-        <p class="modal-description">
-            Мы живем по принципам <strong>zero waste</strong>, используем перерабатываемые материалы
-            и бережно сохраняем экосистему места, чтобы оно оставалось нетронутым для будущих поколений.
-        </p>
-        <div class="modal-footer">
-            <button class="modal-close-btn" data-close="modal-eco">Отлично!</button>
-        </div>
-    </div>
+<!-- ===== ШАПКА ===== -->
+<header class="header">
+<nav class="nav">
+<a href="community.html#cards-homes">Проживание</a>
+<a href="main.html#leisure">Досуг</a>
+<a href="community.html">Комьюнити</a>
+<a href="main-1.html">О нас</a>
+</nav>
+<a href="cabinet.html" class="btn-book">Кабинет</a>
+</header>
+<!-- хиро -->
+<section class="hero">
+<div class="hero-content">
+<h1>Отдыхайте без лишних забот</h1>
 </div>
-
+</section>
+<!-- о нас -->
+<section class="about" id="about">
+<div class="container">
+<h2 class="section-title">О нас</h2>
+<div class="about-grid">
+<img class="about-image" src="image/А-фрейм.webp" alt="Домики в лесу">
+<div class="about-text">
+<p>Мы создали этот глэмпинг не просто для ночёвки на природе. Это пространство для цифрового детокса, глубокого выдоха и встреч с близкими по духу людьми. Никакого шума трасс — только треск костра, эстетика минимализма и шёпот леса.</p>
+<p>Представьте: вы просыпаетесь не от звонка будильника, а от мягкого солнечного света, пробивающегося сквозь панорамное окно. Ваш первый кофе приготовлен на собственной террасе, а воздух пахнет хвоей и утренней росой. Здесь время замедляется. Мы продумали каждую деталь: от качественного постельного белья и ароматных травяных чаёв до библиотеки бестселлеров и пледов для вечерних посиделок. Этот глэмпинг — ваша персональная перезагрузка. Место, где можно выключить телефон, чтобы наконец услышать себя.</p>
+</div>
+</div>
+<div class="about-grid reverse">
+<img class="about-image" src="image/дом-в-лесу.webp" alt="Домики вечером">
+<div class="about-text">
+<p>Мы стёрли грань между дикой природой и премиальным комфортом. Здесь вас ждут панорамные окна с видом на вековые деревья, ортопедические матрасы, дизайнерская мебель из натуральных материалов и горячий душ, не нарушающий гармонию окружения. Мы намеренно оставили Wi-Fi только в общей зоне: в ваших домиках связи нет, и это наша главная особенность. Замените бесконечный скроллинг ленты на наблюдение за млечным путём, а звуковые уведомления — на пение птиц.</p>
+<p>Наша философия — «не навреди». Мы строим в диалоге с ландшафтом, используем экологичные материалы и поддерживаем локальных фермеров, чтобы ваш отдых был не только приятным, но и осознанным.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- почему мы -->
+<section class="why-us" id="leisure">
+<div class="container">
+<h2 class="section-title">Почему выбирают нас?</h2>
+<div class="why-grid">
+<!-- Кнопка 1: Экологичность -->
+<div class="why-card">
+<img src="image/ecology.webp" alt="Экологичность">
+<div class="why-card-overlay">
+<span class="why-card-title">Экологичность</span>
+<button class="open-modal-btn" data-modal="modal-eco">Узнать больше <span class="arrow">&rarr;</span></button>
+</div>
+</div>
+<!-- Кнопка 2: Ритм природы -->
+<div class="why-card">
+<img src="image/nature-rithm.webp" alt="Ритм природы">
+<div class="why-card-overlay">
+<span class="why-card-title">Ритм природы</span>
+<button class="open-modal-btn" data-modal="modal-rhythm">Узнать больше <span class="arrow">&rarr;</span></button>
+</div>
+</div>
+<!-- Кнопка 3: Умный комфорт -->
+<div class="why-card">
+<img src="image/smart-comfortable.webp" alt="Умный комфорт">
+<div class="why-card-overlay">
+<span class="why-card-title">Умный комфорт</span>
+<button class="open-modal-btn" data-modal="modal-comfort">Узнать больше <span class="arrow">&rarr;</span></button>
+</div>
+</div>
+</div>
+</div>
+<div class="modal-overlay" id="modal-eco" role="dialog" aria-modal="true" aria-labelledby="ecoTitle">
+<div class="modal-card">
+<h2 class="modal-title" id="ecoTitle">Экологичность</h2>
+<p class="modal-description">
+Мы живем по принципам <strong>zero waste</strong>, используем перерабатываемые материалы
+и бережно сохраняем экосистему места, чтобы оно оставалось нетронутым для будущих поколений.
+</p>
+<div class="modal-footer">
+<button class="modal-close-btn" data-close="modal-eco">Отлично!</button>
+</div>
+</div>
+</div>
 <div class="modal-overlay" id="modal-rhythm" role="dialog" aria-modal="true" aria-labelledby="rhythmTitle">
-    <div class="modal-card">
-        <h2 class="modal-title" id="rhythmTitle">Ритм природы</h2>
-        <p class="modal-description">
-            Расписание здесь диктует солнце, а не будильник. 
-            Утренняя йога на пирсе, дневные прогулки по экотропам, 
-            вечерние астрономические наблюдения и долгие разговоры у огня.
-        </p>
-        <div class="modal-footer">
-            <button class="modal-close-btn" data-close="modal-rhythm">Отлично!</button>
-        </div>
-    </div>
+<div class="modal-card">
+<h2 class="modal-title" id="rhythmTitle">Ритм природы</h2>
+<p class="modal-description">
+Расписание здесь диктует солнце, а не будильник.
+Утренняя йога на пирсе, дневные прогулки по экотропам,
+вечерние астрономические наблюдения и долгие разговоры у огня.
+</p>
+<div class="modal-footer">
+<button class="modal-close-btn" data-close="modal-rhythm">Отлично!</button>
 </div>
-
+</div>
+</div>
 <div class="modal-overlay" id="modal-comfort" role="dialog" aria-modal="true" aria-labelledby="comfortTitle">
-    <div class="modal-card">
-        <h2 class="modal-title" id="comfortTitle">Умный комфорт</h2>
-        <p class="modal-description">
-            Полноценная ванная комната, климат-контроль 
-            и свободные кровати посреди дикого леса. 
-            Вы не жертвуете удобствами ради атмосферы.
-        </p>
-        <div class="modal-footer">
-            <button class="modal-close-btn" data-close="modal-comfort">Отлично!</button>
-        </div>
-    </div>
+<div class="modal-card">
+<h2 class="modal-title" id="comfortTitle">Умный комфорт</h2>
+<p class="modal-description">
+Полноценная ванная комната, климат-контроль
+и свободные кровати посреди дикого леса.
+Вы не жертвуете удобствами ради атмосферы.
+</p>
+<div class="modal-footer">
+<button class="modal-close-btn" data-close="modal-comfort">Отлично!</button>
 </div>
-  </section>
-
-  <!-- карточки -->
-  <div class="cards-homes" id="cards-homes">
-    <h2 class="section-title">Наши домики</h2>
-
-    <div class="card" id="card-1">
-      <div class="card-image">
-        <img src="image/сфера.svg" alt="Дом-сфера">
-      </div>
-      <div class="card-content">
-        <div class="card-title">Лесной купол</div>
-        <div class="card-tags">
-          <span class="tag">Wi-Fi</span>
-          <span class="tag">Сплит-система</span>
-          <span class="tag">Телевизор с плоским экраном</span>
-          <span class="tag">Дом-сфера</span>
-        </div>
-        <div class="card-description">
-          <div class="desc-line">
-            <span class="desc-label">Расположение</span>
-            <span class="desc-value">Уютный домик в лесу</span>
-          </div>
-          <div class="desc-line">
-            <span class="desc-label">Спальные места</span>
-            <span class="desc-value">Двуспальная кровать king-size</span>
-          </div>
-          <div class="desc-line">
-            <span class="desc-label">Вместимость</span>
-            <span class="desc-value">2-4 человека</span>
-          </div>
-          <div class="desc-line">
-            <span class="desc-label">Особенность</span>
-            <span class="desc-value">Вид на озеро</span>
-          </div>
-          <div class="desc-line">
-            <span class="desc-label">Цена</span>
-            <span class="desc-value">от 5 000 ₽ в сутки</span>
-          </div>
-        </div>
-        <div class="card-buttons">
-          <button class="btn btn-secondary">Узнать больше</button>
-          <button class="btn btn-primary">Забронировать дом</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="card" id="card-2">
-      <div class="card-image">
-        <img src="image/дом-в-лесу.png" alt="Домик в лесу">
-      </div>
-      <div class="card-content">
-        <div class="card-title">Лесная тишина</div>
-        <div class="card-tags">
-          <span class="tag">Wi-Fi</span>
-          <span class="tag">Баня</span>
-          <span class="tag">Горы</span>
-          <span class="tag">Камин</span>
-        </div>
-        <div class="card-description">
-          <div class="desc-line">
-            <span class="desc-label">Расположение</span>
-            <span class="desc-value">Домик в лесу</span>
-          </div>
-          <div class="desc-line">
-            <span class="desc-label">Спальные места</span>
-            <span class="desc-value">Двуспальная кровать</span>
-          </div>
-          <div class="desc-line">
-            <span class="desc-label">Вместимость</span>
-            <span class="desc-value">2-4 человека</span>
-          </div>
-          <div class="desc-line">
-            <span class="desc-label">Особенность</span>
-            <span class="desc-value">Полное уединение в лесу</span>
-          </div>
-          <div class="desc-line">
-            <span class="desc-label">Цена</span>
-            <span class="desc-value">от 7 500 ₽ в сутки</span>
-          </div>
-        </div>
-        <div class="card-buttons">
-          <button class="btn btn-secondary">Узнать больше</button>
-          <button class="btn btn-primary">Забронировать дом</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="card" id="card-3">
-      <div class="card-image">
-        <img src="image/дом-с-чаном.png" alt="Домик с чаном">
-      </div>
-      <div class="card-content">
-        <div class="card-title">Лофт в бору</div>
-        <div class="card-tags">
-          <span class="tag">Wi-Fi</span>
-          <span class="tag">Smart-TV</span>
-          <span class="tag">Сплит-система</span>
-          <span class="tag">Персопализированный чан</span>
-        </div>
-        <div class="card-description">
-          <div class="desc-line">
-            <span class="desc-label">Расположение</span>
-            <span class="desc-value">Дом на берегу</span>
-          </div>
-          <div class="desc-line">
-            <span class="desc-label">Спальные места</span>
-            <span class="desc-value">2 двуспальные кровати</span>
-          </div>
-          <div class="desc-line">
-            <span class="desc-label">Вместимость</span>
-            <span class="desc-value">7 человек</span>
-          </div>
-          <div class="desc-line">
-            <span class="desc-label">Особенность</span>
-            <span class="desc-value">Деревянный чан с подогревом</span>
-          </div>
-          <div class="desc-line">
-            <span class="desc-label">Цена</span>
-            <span class="desc-value">от 6 000 ₽ сутки</span>
-          </div>
-        </div>
-        <div class="card-buttons">
-          <button class="btn btn-secondary">Узнать больше</button>
-          <button class="btn btn-primary">Забронировать дом</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- FAQ SECTION -->
-  <div class="faq-container" id="FAQ">
-    <h2 class="section-title">Популярные вопросы</h2>
-
-    <div class="faq-item">
-      <div class="faq-question" onclick="toggleFaq(this)">
-        <span class="faq-question-text">А чем занять ребенка?</span>
-        <button class="faq-toggle" aria-label="Развернуть ответ">
-          <span class="icon-plus">+</span>
-          <span class="icon-minus">−</span>
-        </button>
-      </div>
-      <div class="faq-answer">
-        <p class="faq-answer-text">
-          На территории глэмпинга доступны различные групповые занятия для всех возрастов! Вы можете прийти с ребенком или оставить его под присмотром опытных специалистов.
-        </p>
-      </div>
-    </div>
-
-    <div class="faq-item">
-      <div class="faq-question" onclick="toggleFaq(this)">
-        <span class="faq-question-text">А как часто моются чаны на территории глэмпинга?</span>
-        <button class="faq-toggle" aria-label="Развернуть ответ">
-          <span class="icon-plus">+</span>
-          <span class="icon-minus">−</span>
-        </button>
-      </div>
-      <div class="faq-answer">
-        <p class="faq-answer-text">
-          Чаны на территории глэмпинга очищаются сразу перед заездом гостей, а вода в них тщательно прогревается свежими дровами, обеспечивая чистую и ароматную воду для каждого клиента.
-        </p>
-      </div>
-    </div>
-
-    <div class="faq-item">
-      <div class="faq-question" onclick="toggleFaq(this)">
-        <span class="faq-question-text">Можно ли приехать с собакой?</span>
-        <button class="faq-toggle" aria-label="Развернуть ответ">
-          <span class="icon-plus">+</span>
-          <span class="icon-minus">−</span>
-        </button>
-      </div>
-      <div class="faq-answer">
-        <p class="faq-answer-text">
-          Да, мы 100% dog-friendly. Для вашего питомца мы подготовим миски, лежанку, также, при необходимости мы можем предоставить препараты или ошейники против клещей.
-        </p>
-      </div>
-    </div>
-
-    <div class="faq-item">
-      <div class="faq-question" onclick="toggleFaq(this)">
-        <span class="faq-question-text">Есть ли Wi-Fi?</span>
-        <button class="faq-toggle" aria-label="Развернуть ответ">
-          <span class="icon-plus">+</span>
-          <span class="icon-minus">−</span>
-        </button>
-      </div>
-      <div class="faq-answer">
-        <p class="faq-answer-text">
-          На всей территории есть стабильный Wi-Fi. Но мы искренне рекомендуем перевести телефон в авиарежим для полноценного отдыха в нашем комплексе.
-        </p>
-      </div>
-    </div>
-  </div>
-
-  <div class="map-container" id="map">
-    <h2 class="section-title">Как нас найти?</h2>
-
-    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A02ca726bfb855baea798301e57301edb7cbdfd575a5dedb4bf932c936253f65b&amp;width=900&amp;height=500&amp;lang=ru_RU&amp;scroll=true"></script>
-
-  </div>
-
-  <!-- FOOTER SECTION -->
-  <div class="footer-wrapper">
-    <footer class="footer">
-      <div class="footer-content">
-        <div class="footer-image">
-          <img src="image/Image (12)-no-bg-preview (carve.photos) 2.svg" alt="схема">
-        </div>
-
-        <div class="footer-nav">
-          <div class="footer-section">
-            <h3>Навигация</h3>
-            <ul>
-              <li><a href="community.html#activities">Услуги</a></li>
-              <li><a href="community.html#cards-homes">Каталог</a></li>
-              <li><a href="#">Контакты</a></li>
-            </ul>
-          </div>
-
-          <div class="footer-section">
-            <h3>О нас</h3>
-            <ul>
-              <li><a href="#">Философия</a></li>
-              <li><a href="#">Почему МЭТЧ?</a></li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="footer-contacts">
-          <h3>Контакты</h3>
-          <p><a href="tel:88005553535">8 800 555 3535</a></p>
-          <p><a href="mailto:example@mail">example@mail</a></p>
-
-          <div class="social-icons">
-            <a href="#" class="social-icon" title="Telegram">
-              <img src="image/Telegram App.svg" alt="Telegram">
-            </a>
-            <a href="#" class="social-icon" title="VK">
-              <img src="image/VKontakte.svg" alt="VK">
-            </a>
-            <a href="#" class="social-icon" title="Яндекс Дзен">
-              <img src="image/Yandex Zen.svg" alt="Дзен">
-            </a>
-            <a href="#" class="social-icon" title="Одноклассники">
-              <img src="image/Odnoklassniki.svg" alt="OK">
-            </a>
-          </div>
-        </div>
-      </div>
-    </footer>
-  </div>
-
-  <!-- SCRIPTS -->
-
-  <script>
-    (function() {
-        'use strict';
-
-        // --- Все кнопки открытия (с data-modal) ---
-        const openButtons = document.querySelectorAll('.open-modal-btn[data-modal]');
-        // --- Все кнопки закрытия (с data-close) ---
-        const closeButtons = document.querySelectorAll('.modal-close-btn[data-close]');
-        // --- Все оверлеи ---
-        const overlays = document.querySelectorAll('.modal-overlay');
-
-        let activeOverlay = null;
-
-        // --- Функция закрытия ---
-        function closeModal(overlayElement) {
-            if (!overlayElement) return;
-            overlayElement.classList.remove('active');
-            document.body.style.overflow = '';
-            if (activeOverlay === overlayElement) {
-                activeOverlay = null;
-            }
-            // Возвращаем фокус на кнопку, которая открыла это окно
-            const modalId = overlayElement.id;
-            if (modalId) {
-                const triggerBtn = document.querySelector(`.open-modal-btn[data-modal="${modalId}"]`);
-                if (triggerBtn) {
-                    triggerBtn.focus();
-                }
-            }
-        }
-
-        // --- Функция открытия ---
-        function openModal(overlayElement) {
-            if (!overlayElement) return;
-            // Если другое окно открыто — закрываем его
-            if (activeOverlay && activeOverlay !== overlayElement) {
-                closeModal(activeOverlay);
-            }
-            overlayElement.classList.add('active');
-            document.body.style.overflow = 'hidden';
-            activeOverlay = overlayElement;
-        }
-
-        // --- Обработчики на кнопки открытия ---
-        openButtons.forEach(btn => {
-            btn.addEventListener('click', function(e) {
-                e.stopPropagation(); // Предотвращаем всплытие
-                const modalId = this.dataset.modal;
-                if (!modalId) return;
-                const targetOverlay = document.getElementById(modalId);
-                if (targetOverlay) {
-                    openModal(targetOverlay);
-                }
-            });
-        });
-
-        // --- Обработчики на кнопки закрытия ---
-        closeButtons.forEach(btn => {
-            btn.addEventListener('click', function(e) {
-                const closeTargetId = this.dataset.close;
-                if (!closeTargetId) return;
-                const targetOverlay = document.getElementById(closeTargetId);
-                if (targetOverlay) {
-                    closeModal(targetOverlay);
-                }
-            });
-        });
-
-        // --- Закрытие по клику на оверлей ---
-        overlays.forEach(overlay => {
-            overlay.addEventListener('click', function(e) {
-                if (e.target === this) {
-                    closeModal(this);
-                }
-            });
-        });
-
-        // --- Закрытие по Escape ---
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape' && activeOverlay) {
-                closeModal(activeOverlay);
-            }
-        });
-
-        // --- Сброс скролла при уходе ---
-        window.addEventListener('beforeunload', function() {
-            document.body.style.overflow = '';
-        });
-
-    })();
+</div>
+</div>
+</section>
+<!-- карточки -->
+<div class="cards-homes" id="cards-homes">
+<h2 class="section-title">Наши домики</h2>
+<div class="card" id="card-1">
+<div class="card-image">
+<img src="image/сфера.webp" alt="Дом-сфера">
+</div>
+<div class="card-content">
+<div class="card-title">Лесной купол</div>
+<div class="card-tags">
+<span class="tag">Wi-Fi</span>
+<span class="tag">Сплит-система</span>
+<span class="tag">Телевизор с плоским экраном</span>
+<span class="tag">Дом-сфера</span>
+</div>
+<div class="card-description">
+<div class="desc-line">
+<span class="desc-label">Расположение</span>
+<span class="desc-value">Уютный домик в лесу</span>
+</div>
+<div class="desc-line">
+<span class="desc-label">Спальные места</span>
+<span class="desc-value">Двуспальная кровать king-size</span>
+</div>
+<div class="desc-line">
+<span class="desc-label">Вместимость</span>
+<span class="desc-value">2-4 человека</span>
+</div>
+<div class="desc-line">
+<span class="desc-label">Особенность</span>
+<span class="desc-value">Вид на озеро</span>
+</div>
+<div class="desc-line">
+<span class="desc-label">Цена</span>
+<span class="desc-value">от 5 000 ₽ в сутки</span>
+</div>
+</div>
+<div class="card-buttons">
+<button class="btn btn-secondary">Узнать больше</button>
+<button class="btn btn-primary">Забронировать дом</button>
+</div>
+</div>
+</div>
+<div class="card" id="card-2">
+<div class="card-image">
+<img src="image/дом-в-лесу.webp" alt="Домик в лесу">
+</div>
+<div class="card-content">
+<div class="card-title">Лесная тишина</div>
+<div class="card-tags">
+<span class="tag">Wi-Fi</span>
+<span class="tag">Баня</span>
+<span class="tag">Горы</span>
+<span class="tag">Камин</span>
+</div>
+<div class="card-description">
+<div class="desc-line">
+<span class="desc-label">Расположение</span>
+<span class="desc-value">Домик в лесу</span>
+</div>
+<div class="desc-line">
+<span class="desc-label">Спальные места</span>
+<span class="desc-value">Двуспальная кровать</span>
+</div>
+<div class="desc-line">
+<span class="desc-label">Вместимость</span>
+<span class="desc-value">2-4 человека</span>
+</div>
+<div class="desc-line">
+<span class="desc-label">Особенность</span>
+<span class="desc-value">Полное уединение в лесу</span>
+</div>
+<div class="desc-line">
+<span class="desc-label">Цена</span>
+<span class="desc-value">от 7 500 ₽ в сутки</span>
+</div>
+</div>
+<div class="card-buttons">
+<button class="btn btn-secondary">Узнать больше</button>
+<button class="btn btn-primary">Забронировать дом</button>
+</div>
+</div>
+</div>
+<div class="card" id="card-3">
+<div class="card-image">
+<img src="image/дом-с-чаном.webp" alt="Домик с чаном">
+</div>
+<div class="card-content">
+<div class="card-title">Лофт в бору</div>
+<div class="card-tags">
+<span class="tag">Wi-Fi</span>
+<span class="tag">Smart-TV</span>
+<span class="tag">Сплит-система</span>
+<span class="tag">Персопализированный чан</span>
+</div>
+<div class="card-description">
+<div class="desc-line">
+<span class="desc-label">Расположение</span>
+<span class="desc-value">Дом на берегу</span>
+</div>
+<div class="desc-line">
+<span class="desc-label">Спальные места</span>
+<span class="desc-value">2 двуспальные кровати</span>
+</div>
+<div class="desc-line">
+<span class="desc-label">Вместимость</span>
+<span class="desc-value">7 человек</span>
+</div>
+<div class="desc-line">
+<span class="desc-label">Особенность</span>
+<span class="desc-value">Деревянный чан с подогревом</span>
+</div>
+<div class="desc-line">
+<span class="desc-label">Цена</span>
+<span class="desc-value">от 6 000 ₽ сутки</span>
+</div>
+</div>
+<div class="card-buttons">
+<button class="btn btn-secondary">Узнать больше</button>
+<button class="btn btn-primary">Забронировать дом</button>
+</div>
+</div>
+</div>
+</div>
+<!-- FAQ SECTION -->
+<div class="faq-container" id="FAQ">
+<h2 class="section-title">Популярные вопросы</h2>
+<div class="faq-item">
+<div class="faq-question" onclick="toggleFaq(this)">
+<span class="faq-question-text">А чем занять ребенка?</span>
+<button class="faq-toggle" aria-label="Развернуть ответ">
+<span class="icon-plus">+</span>
+<span class="icon-minus">−</span>
+</button>
+</div>
+<div class="faq-answer">
+<p class="faq-answer-text">
+На территории глэмпинга доступны различные групповые занятия для всех возрастов! Вы можете прийти с ребенком или оставить его под присмотром опытных специалистов.
+</p>
+</div>
+</div>
+<div class="faq-item">
+<div class="faq-question" onclick="toggleFaq(this)">
+<span class="faq-question-text">А как часто моются чаны на территории глэмпинга?</span>
+<button class="faq-toggle" aria-label="Развернуть ответ">
+<span class="icon-plus">+</span>
+<span class="icon-minus">−</span>
+</button>
+</div>
+<div class="faq-answer">
+<p class="faq-answer-text">
+Чаны на территории глэмпинга очищаются сразу перед заездом гостей, а вода в них тщательно прогревается свежими дровами, обеспечивая чистую и ароматную воду для каждого клиента.
+</p>
+</div>
+</div>
+<div class="faq-item">
+<div class="faq-question" onclick="toggleFaq(this)">
+<span class="faq-question-text">Можно ли приехать с собакой?</span>
+<button class="faq-toggle" aria-label="Развернуть ответ">
+<span class="icon-plus">+</span>
+<span class="icon-minus">−</span>
+</button>
+</div>
+<div class="faq-answer">
+<p class="faq-answer-text">
+Да, мы 100% dog-friendly. Для вашего питомца мы подготовим миски, лежанку, также, при необходимости мы можем предоставить препараты или ошейники против клещей.
+</p>
+</div>
+</div>
+<div class="faq-item">
+<div class="faq-question" onclick="toggleFaq(this)">
+<span class="faq-question-text">Есть ли Wi-Fi?</span>
+<button class="faq-toggle" aria-label="Развернуть ответ">
+<span class="icon-plus">+</span>
+<span class="icon-minus">−</span>
+</button>
+</div>
+<div class="faq-answer">
+<p class="faq-answer-text">
+На всей территории есть стабильный Wi-Fi. Но мы искренне рекомендуем перевести телефон в авиарежим для полноценного отдыха в нашем комплексе.
+</p>
+</div>
+</div>
+</div>
+<div class="map-container" id="map">
+<h2 class="section-title">Как нас найти?</h2>
+<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A02ca726bfb855baea798301e57301edb7cbdfd575a5dedb4bf932c936253f65b&amp;width=900&amp;height=500&amp;lang=ru_RU&amp;scroll=true"></script>
+</div>
+<!-- FOOTER SECTION -->
+<div class="footer-wrapper">
+<footer class="footer">
+<div class="footer-content">
+<div class="footer-image">
+<img src="image/Image (12)-no-bg-preview (carve.photos) 2.webp" alt="схема">
+</div>
+<div class="footer-nav">
+<div class="footer-section">
+<h3>Навигация</h3>
+<ul>
+<li><a href="community.html#activities">Услуги</a></li>
+<li><a href="community.html#cards-homes">Каталог</a></li>
+<li><a href="#">Контакты</a></li>
+</ul>
+</div>
+<div class="footer-section">
+<h3>О нас</h3>
+<ul>
+<li><a href="#">Философия</a></li>
+<li><a href="#">Почему МЭТЧ?</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-contacts">
+<h3>Контакты</h3>
+<p><a href="tel:88005553535">8 800 555 3535</a></p>
+<p><a href="mailto:example@mail">example@mail</a></p>
+<div class="social-icons">
+<a href="#" class="social-icon" title="Telegram">
+<img src="image/Telegram App.webp" alt="Telegram">
+</a>
+<a href="#" class="social-icon" title="VK">
+<img src="image/VKontakte.webp" alt="VK">
+</a>
+<a href="#" class="social-icon" title="Яндекс Дзен">
+<img src="image/Yandex Zen.webp" alt="Дзен">
+</a>
+<a href="#" class="social-icon" title="Одноклассники">
+<img src="image/Odnoklassniki.webp" alt="OK">
+</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<!-- SCRIPTS -->
+<script>
+(function() {
+'use strict';
+// --- Все кнопки открытия (с data-modal) ---
+const openButtons = document.querySelectorAll('.open-modal-btn[data-modal]');
+// --- Все кнопки закрытия (с data-close) ---
+const closeButtons = document.querySelectorAll('.modal-close-btn[data-close]');
+// --- Все оверлеи ---
+const overlays = document.querySelectorAll('.modal-overlay');
+let activeOverlay = null;
+// --- Функция закрытия ---
+function closeModal(overlayElement) {
+if (!overlayElement) return;
+overlayElement.classList.remove('active');
+document.body.style.overflow = '';
+if (activeOverlay === overlayElement) {
+activeOverlay = null;
+}
+// Возвращаем фокус на кнопку, которая открыла это окно
+const modalId = overlayElement.id;
+if (modalId) {
+const triggerBtn = document.querySelector(`.open-modal-btn[data-modal="${modalId}"]`);
+if (triggerBtn) {
+triggerBtn.focus();
+}
+}
+}
+// --- Функция открытия ---
+function openModal(overlayElement) {
+if (!overlayElement) return;
+// Если другое окно открыто — закрываем его
+if (activeOverlay && activeOverlay !== overlayElement) {
+closeModal(activeOverlay);
+}
+overlayElement.classList.add('active');
+document.body.style.overflow = 'hidden';
+activeOverlay = overlayElement;
+}
+// --- Обработчики на кнопки открытия ---
+openButtons.forEach(btn => {
+btn.addEventListener('click', function(e) {
+e.stopPropagation(); // Предотвращаем всплытие
+const modalId = this.dataset.modal;
+if (!modalId) return;
+const targetOverlay = document.getElementById(modalId);
+if (targetOverlay) {
+openModal(targetOverlay);
+}
+});
+});
+// --- Обработчики на кнопки закрытия ---
+closeButtons.forEach(btn => {
+btn.addEventListener('click', function(e) {
+const closeTargetId = this.dataset.close;
+if (!closeTargetId) return;
+const targetOverlay = document.getElementById(closeTargetId);
+if (targetOverlay) {
+closeModal(targetOverlay);
+}
+});
+});
+// --- Закрытие по клику на оверлей ---
+overlays.forEach(overlay => {
+overlay.addEventListener('click', function(e) {
+if (e.target === this) {
+closeModal(this);
+}
+});
+});
+// --- Закрытие по Escape ---
+document.addEventListener('keydown', function(e) {
+if (e.key === 'Escape' && activeOverlay) {
+closeModal(activeOverlay);
+}
+});
+// --- Сброс скролла при уходе ---
+window.addEventListener('beforeunload', function() {
+document.body.style.overflow = '';
+});
+})();
 </script>
-  <script>
-    function toggleFaq(element) {
-      const faqItem = element.closest('.faq-item');
-      const isActive = faqItem.classList.contains('active');
-
-      // Закрыть все остальные (открывается только один)
-      document.querySelectorAll('.faq-item').forEach(item => {
-        item.classList.remove('active');
-      });
-
-      // Переключить текущий
-      if (!isActive) {
-        faqItem.classList.add('active');
-      }
-    }
-  </script>
-
+<script>
+function toggleFaq(element) {
+const faqItem = element.closest('.faq-item');
+const isActive = faqItem.classList.contains('active');
+// Закрыть все остальные (открывается только один)
+document.querySelectorAll('.faq-item').forEach(item => {
+item.classList.remove('active');
+});
+// Переключить текущий
+if (!isActive) {
+faqItem.classList.add('active');
+}
+}
+</script>
 </body>
 </html>
